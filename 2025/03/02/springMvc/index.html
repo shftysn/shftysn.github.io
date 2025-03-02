@@ -19,23 +19,25 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="摘要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/03/02/hello-world/index.html">
+<meta property="og:title" content="spingMvc参数传递">
+<meta property="og:url" content="http://example.com/2025/03/02/springMvc/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="摘要">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/default.png">
-<meta property="article:published_time" content="2025-03-02T08:41:56.391Z">
-<meta property="article:modified_time" content="2025-03-02T10:14:12.995Z">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2025-03-02T08:59:28.486Z">
+<meta property="article:modified_time" content="2025-03-02T11:22:11.448Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/default.png">
+<meta name="twitter:image" content="http://example.com/img/avatar.png">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>spingMvc参数传递 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="spingMvc参数传递"></span>
           
         </div>
 
@@ -212,7 +214,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-03-02 16:41" pubdate>
+        <time datetime="2025-03-02 16:59" pubdate>
           2025年3月2日 下午
         </time>
       </span>
@@ -224,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          444 字
         
       </span>
     
@@ -235,7 +237,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -281,24 +283,34 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">spingMvc参数传递</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h1><h2 id="普通参数传递"><a href="#普通参数传递" class="headerlink" title="普通参数传递"></a>普通参数传递</h2><p><img src="/img/image-20250115210919349.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/image-20250112202934735.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/save&quot;)<br>//前端参数名称和接收参数名称一样，不同则用@RequestParam进行指定<br>public String save(String name)&#123;<br>    System.out.println(name);<br>    return &quot;&#123;&#x27;info&#x27;:&#x27;springmvc&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h2 id="POJO参数"><a href="#POJO参数" class="headerlink" title="POJO参数"></a>POJO参数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/pojoParam&quot;)<br>@ResponseBody<br>public String pojoParam(User user)&#123;<br>    System.out.println(&quot;pojo参数传递 user ==&gt; &quot;+user);<br>    return &quot;&#123;&#x27;module&#x27;:&#x27;pojo param&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<h2 id="数组类型参数"><a href="#数组类型参数" class="headerlink" title="数组类型参数"></a>数组类型参数</h2><p><img src="/img/image-20250112204510401.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/arrayParam&quot;)<br>@ResponseBody<br>public String arrayParam(String[] likes)&#123;<br>    System.out.println(&quot;数组参数传递 likes ==&gt; &quot;+ Arrays.toString(likes));<br>    return &quot;&#123;&#x27;module&#x27;:&#x27;array param&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<h2 id="集合类型参数"><a href="#集合类型参数" class="headerlink" title="集合类型参数"></a>集合类型参数</h2><p><img src="/img/image-20250112204732999.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/listParam&quot;)<br>@ResponseBody<br>public String listParam(@RequestParam List&lt;String&gt; likes)&#123;<br>    System.out.println(&quot;集合参数传递 likes ==&gt; &quot;+ likes);<br>    return &quot;&#123;&#x27;module&#x27;:&#x27;list param&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="JSON数据"><a href="#JSON数据" class="headerlink" title="JSON数据"></a>JSON数据</h2><p><img src="/img/image-20250112214048171.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/pojoParamForJson&quot;)<br>@ResponseBody<br>public String pojoParamForJson(@RequestBody User user)&#123;<br>    System.out.println(&quot;pojo(json)参数传递 user ==&gt; &quot;+user);<br>    return &quot;&#123;&#x27;module&#x27;:&#x27;pojo for json param&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="日期类型数据"><a href="#日期类型数据" class="headerlink" title="日期类型数据"></a>日期类型数据</h2><p><img src="/img/image-20250112215019592.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs copy">@RequestMapping(&quot;/dataParam&quot;)<br>@ResponseBody<br>public String dataParam(Date date,<br>                        @DateTimeFormat(pattern=&quot;yyyy-MM-dd&quot;) Date date1,<br>                        @DateTimeFormat(pattern=&quot;yyyy/MM/dd HH:mm:ss&quot;) Date date2)&#123;<br>    System.out.println(&quot;参数传递 date ==&gt; &quot;+date);<br>    System.out.println(&quot;参数传递 date1(yyyy-MM-dd) ==&gt; &quot;+date1);<br>    System.out.println(&quot;参数传递 date2(yyyy/MM/dd HH:mm:ss) ==&gt; &quot;+date2);<br>    return &quot;&#123;&#x27;module&#x27;:&#x27;data param&#x27;&#125;&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="响应数据"><a href="#响应数据" class="headerlink" title="响应数据"></a>响应数据</h1><h2 id="响应页面"><a href="#响应页面" class="headerlink" title="响应页面"></a>响应页面</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs copy">//响应页面/跳转页面<br>//返回值为String类型，设置返回值为页面名称，即可实现页面跳转<br>@RequestMapping(&quot;/toJumpPage&quot;)<br>public String toJumpPage()&#123;<br>    System.out.println(&quot;跳转页面&quot;);<br>    return &quot;page.jsp&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="响应文本数据"><a href="#响应文本数据" class="headerlink" title="响应文本数据"></a>响应文本数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs copy">//响应文本数据<br>//返回值为String类型，设置返回值为任意字符串信息，即可实现返回指定字符串信息，需要依赖@ResponseBody注解<br>@RequestMapping(&quot;/toText&quot;)<br>@ResponseBody<br>public String toText()&#123;<br>    System.out.println(&quot;返回纯文本数据&quot;);<br>    return &quot;response text&quot;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="REST风格"><a href="#REST风格" class="headerlink" title="REST风格"></a>REST风格</h1><p><img src="/img/image-20250112223047204.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -308,6 +320,15 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B/" class="print-no-link">#编程</a>
+      
+        <a href="/tags/java/" class="print-no-link">#java</a>
+      
+    </div>
+  
 </div>
 
 
@@ -316,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2025/03/02/hello-world/</div>
+      <div>spingMvc参数传递</div>
+      <div>http://example.com/2025/03/02/springMvc/</div>
     </div>
     <div class="license-meta">
       
@@ -361,15 +382,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/02/springMvc/" title="spingMvc参数传递">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">spingMvc参数传递</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/03/02/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
